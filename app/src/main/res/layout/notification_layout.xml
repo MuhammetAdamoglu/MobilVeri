@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:paddingBottom="7dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="7dp">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_Use"
+        style="@style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:indeterminate="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_UseData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/progressBar_Use"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:gravity="center"
+        android:text="   254 MB Kaldı"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_UseData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/progressBar_Use"
+        android:layout_toLeftOf="@+id/progressBar_Use"
+        android:layout_toStartOf="@+id/progressBar_Use"
+        android:gravity="center"
+        android:text="  KALAN  "
+        android:textColor="@color/colorPrimary"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar_Daily"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_message"
+        android:gravity="center"
+        android:text="4 GB  "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_Daily"
+        style="@style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/progressBar_Use"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:indeterminate="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar_Daily"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/progressBar_Use"
+        android:gravity="center"
+        android:text="    BUGÜN   "
+        android:textColor="@color/colorPrimary"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView_UseDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar_Daily"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="   50 MB Kullanıldı"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/progressBar_Daily" />
+
+    <TextView
+        android:id="@+id/textView_DataDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar_Daily"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/progressBar_Daily"
+        android:gravity="center"
+        android:text="57 MB  "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar_Daily"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textView_DataDaily"
+        android:layout_toStartOf="@+id/textView_DataDaily"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:text="10 Gün   "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/textView_Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar_Daily"
+        android:layout_alignTop="@+id/progressBar_Daily"
+        android:layout_toLeftOf="@+id/textView_DataDaily"
+        android:layout_toStartOf="@+id/textView_DataDaily"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:text="120 KB/s   "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp" />
+
+
+</RelativeLayout>
